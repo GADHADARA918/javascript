@@ -55,14 +55,36 @@ console.log(increment()); // 2
 
 // promise
 
-const promise = new Promise((resolve, reject) => {
-    let success = false; // Change this to true to resolve the promise
-    if (success) {
-        resolve("Promise resolved successfully!");
-    } else {
-        reject("Promise rejected!");
-    }
-});
-promise
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+// const promise = new Promise((resolve, reject) => {
+//     let success = false; // Change this to true to resolve the promise
+//     if (success) {
+//         resolve("Promise resolved successfully!");
+//     } else {
+//         reject("Promise rejected!");
+//     }
+// });
+// promise
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error));
+
+// async/await
+
+//  const getData = () => {
+//     return Promise.resolve("user Data");
+//  }
+//   const showData = () => {
+//     const data = await getData();
+//     console.log(data);
+//  }
+function getData() {
+    return Promise.resolve("User Data");
+}
+
+async function showData() {
+    const data = await getData();
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
+    console.log(data);
+}
+
+showData();

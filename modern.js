@@ -132,12 +132,39 @@ console.log(increment()); // 2
 //     console.log("Finished");
 // }
 
-async function grtUser(){
-    try{
-        const response = await fetch(".......");
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.log(error.message);
-    }   
+// async function grtUser(){
+//     try{
+//         const response = await fetch(".......");
+//         const data = await response.json();
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error.message);
+//     }   
+// }
+
+// Fetch API
+// GET request
+// const getUser = async () => {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+//     const data = await response.json();
+//     console.log(data);  
+// }
+//     getUser();
+
+// POST request 
+async function createUser() {
+    const response = await fetch("/api/users", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: "tom",
+            age: 22
+        })
+    });
+
+    const data = await response.json();
+
+    console.log(data);
 }

@@ -30,3 +30,15 @@ if (age >= 18) {
 } else {
     console.log("Minor");
 }
+
+// Looping 
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}

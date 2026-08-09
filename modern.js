@@ -76,15 +76,25 @@ console.log(increment()); // 2
 //     const data = await getData();
 //     console.log(data);
 //  }
-function getData() {
-    return Promise.resolve("User Data");
-}
+// function getData() {
+//     return Promise.resolve("User Data");
+// }
 
-async function showData() {
-    const data = await getData();
-    await new Promise(resolve => setTimeout(resolve, 5000));
+// async function showData() {
+//     const data = await getData();
+//     await new Promise(resolve => setTimeout(resolve, 5000));
 
-    console.log(data);
-}
+//     console.log(data);
+// }
 
-showData();
+// showData();
+
+// event loop
+
+console.log("1");
+
+setTimeout(() => {
+    console.log("2");
+}, 0);
+
+console.log("3");

@@ -12,3 +12,12 @@ let data = null;        // Null
 let value;              // Undefined
 let user = { name };    // Object
 let skills = ["JS", "Node"]; // Array
+
+// Operators
+let a = 10;
+let b = 5;
+
+console.log(a + b); // 15
+console.log(a > b); // true
+console.log(a === b); // false
+console.log(a && b); // 5

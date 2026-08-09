@@ -62,109 +62,122 @@
 // // 
 
 // 1. Raw data: Items in a user's shopping cart
-const shoppingCart = [
-  { id: 101, name: "Gaming Mouse", price: 1500, stock: true, rating: 4.5 },
-  { id: 102, name: "Mechanical Keyboard", price: 4500, stock: true, rating: 4.8 },
-  { id: 103, name: "USB-C Cable", price: 400, stock: false, rating: 3.9 },
-  { id: 104, name: "Wireless Headset", price: 3500, stock: true, rating: 4.2 }
-];
+// const shoppingCart = [
+//   { id: 101, name: "Gaming Mouse", price: 1500, stock: true, rating: 4.5 },
+//   { id: 102, name: "Mechanical Keyboard", price: 4500, stock: true, rating: 4.8 },
+//   { id: 103, name: "USB-C Cable", price: 400, stock: false, rating: 3.9 },
+//   { id: 104, name: "Wireless Headset", price: 3500, stock: true, rating: 4.2 }
+// ];
 
-// 1. filter()
-const availableItems = shoppingCart.filter(item => item.stock === true);
-console.log("Available Items:", availableItems);
-
-
-// 2. map()
-// Problem: Apply a 10% Sunday discount coupon to all available items.
-const discountedItems = availableItems.map(item => {
-  return {
-    ...item,
-    finalPrice: item.price * 0.9 // 10% off
-  };
-});
-console.log("Discounted Items:", discountedItems);
+// // 1. filter()
+// const availableItems = shoppingCart.filter(item => item.stock === true);
+// console.log("Available Items:", availableItems);
 
 
-// 3. reduce()
-const grandTotal = discountedItems.reduce((total, item) => total + item.finalPrice, 0);
-console.log(`Grand Total to Pay: ₹${grandTotal}`); // Output: ₹8550
+// // 2. map()
+// // Problem: Apply a 10% Sunday discount coupon to all available items.
+// const discountedItems = availableItems.map(item => {
+//   return {
+//     ...item,
+//     finalPrice: item.price * 0.9 // 10% off
+//   };
+// });
+// console.log("Discounted Items:", discountedItems);
 
 
-// 4. find()
-const premiumItem = discountedItems.find(item => item.price > 4000);
-console.log("Premium Item for Free Gift:", premiumItem.name); // Output: Mechanical Keyboard
+// // 3. reduce()
+// const grandTotal = discountedItems.reduce((total, item) => total + item.finalPrice, 0);
+// console.log(`Grand Total to Pay: ₹${grandTotal}`); // Output: ₹8550
 
 
-// --- 5. findIndex() ---
-const headsetIndex = discountedItems.findIndex(item => item.name === "Wireless Headset");
-console.log(`Headset is at index: ${headsetIndex}`); // Output: 2
+// // 4. find()
+// const premiumItem = discountedItems.find(item => item.price > 4000);
+// console.log("Premium Item for Free Gift:", premiumItem.name); // Output: Mechanical Keyboard
 
 
-//6. every()
-const isAllHighRated = discountedItems.every(item => item.rating > 4.0);
-console.log("Are all items high rated?:", isAllHighRated); // Output: true
+// // --- 5. findIndex() ---
+// const headsetIndex = discountedItems.findIndex(item => item.name === "Wireless Headset");
+// console.log(`Headset is at index: ${headsetIndex}`); // Output: 2
 
 
-//7. some()
-const triggerAlert = discountedItems.some(item => item.finalPrice > 5000);
-console.log("Trigger budget alert?:", triggerAlert); // Output: false
+// //6. every()
+// const isAllHighRated = discountedItems.every(item => item.rating > 4.0);
+// console.log("Are all items high rated?:", isAllHighRated); // Output: true
 
 
-//8. forEach()
-console.log("\n--- YOUR INVOICE ---");
-discountedItems.forEach((item, index) => {
-  console.log(`${index + 1}. ${item.name} - ₹${item.finalPrice}`);
-});
+// //7. some()
+// const triggerAlert = discountedItems.some(item => item.finalPrice > 5000);
+// console.log("Trigger budget alert?:", triggerAlert); // Output: false
 
-// function
-function add(a, b) {
-    return a + b;
+
+// //8. forEach()
+// console.log("\n--- YOUR INVOICE ---");
+// discountedItems.forEach((item, index) => {
+//   console.log(`${index + 1}. ${item.name} - ₹${item.finalPrice}`);
+// });
+
+// // function
+// function add(a, b) {
+//     return a + b;
+// }
+
+// console.log(add(10, 20)); // 30
+
+// //  arrow function
+// const multiply = (a, b) => a * b;
+
+// console.log(multiply(5, 2)); // 10
+
+// // Array of objects
+// const fruits = ["Apple", "Mango", "Banana"];
+
+// console.log(fruits[0]);
+
+// fruits.push("Orange");
+
+// console.log(fruits);
+// // number array
+// const numbers = [1, 2, 3, 4];
+
+// console.log(numbers.map(n => n * 2));
+// console.log(numbers.filter(n => n > 2));
+// // object
+// const user = {
+//     name: "Tushar",
+//     age: 22,
+//     role: "Backend Developer"
+// };
+
+// console.log(user.name);
+// console.log(user.role);
+
+// // destructuring object
+// const user = {
+//     name: "tom",
+//     age: 22
+// };
+
+// const { name, age } = user;
+
+// console.log(name, age);
+
+// // destructuring array
+// const colors = ["Red", "Blue"];
+
+// const [first, second] = colors;
+
+// console.log(first, second);
+
+// spread and rest operator
+const a = [1, 2];
+const b = [3, 4];
+
+const result = [...a, ...b];
+
+console.log(result);
+// rest operator
+function total(...numbers) {
+    return numbers.reduce((sum, n) => sum + n, 0);
 }
 
-console.log(add(10, 20)); // 30
-
-//  arrow function
-const multiply = (a, b) => a * b;
-
-console.log(multiply(5, 2)); // 10
-
-// Array of objects
-const fruits = ["Apple", "Mango", "Banana"];
-
-console.log(fruits[0]);
-
-fruits.push("Orange");
-
-console.log(fruits);
-// number array
-const numbers = [1, 2, 3, 4];
-
-console.log(numbers.map(n => n * 2));
-console.log(numbers.filter(n => n > 2));
-// object
-const user = {
-    name: "Tushar",
-    age: 22,
-    role: "Backend Developer"
-};
-
-console.log(user.name);
-console.log(user.role);
-
-// destructuring object
-const user = {
-    name: "tom",
-    age: 22
-};
-
-const { name, age } = user;
-
-console.log(name, age);
-
-// destructuring array
-const colors = ["Red", "Blue"];
-
-const [first, second] = colors;
-
-console.log(first, second);
-
+console.log(total(10, 20, 30)); // 60

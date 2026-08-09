@@ -91,10 +91,24 @@ console.log(increment()); // 2
 
 // event loop
 
+// console.log("1");
+
+// setTimeout(() => {
+//     console.log("2");
+// }, 0);
+
+// console.log("3");
+
+//Microsoft Queue
 console.log("1");
 
 setTimeout(() => {
     console.log("2");
-}, 0);
+}, 1000);
 
-console.log("3");
+Promise.resolve()
+.then(() => {
+    console.log("3");
+},2000);
+
+console.log("4");

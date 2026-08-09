@@ -127,3 +127,26 @@ console.log(add(10, 20)); // 30
 const multiply = (a, b) => a * b;
 
 console.log(multiply(5, 2)); // 10
+
+// Array of objects
+const fruits = ["Apple", "Mango", "Banana"];
+
+console.log(fruits[0]);
+
+fruits.push("Orange");
+
+console.log(fruits);
+// number array
+const numbers = [1, 2, 3, 4];
+
+console.log(numbers.map(n => n * 2));
+console.log(numbers.filter(n => n > 2));
+// object
+const user = {
+    name: "Tushar",
+    age: 22,
+    role: "Backend Developer"
+};
+
+console.log(user.name);
+console.log(user.role);

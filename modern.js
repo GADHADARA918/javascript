@@ -100,15 +100,44 @@ console.log(increment()); // 2
 // console.log("3");
 
 //Microsoft Queue
-console.log("1");
+// console.log("1");
 
-setTimeout(() => {
-    console.log("2");
-}, 1000);
+// setTimeout(() => {
+//     console.log("2");
+// }, 1000);
 
-Promise.resolve()
-.then(() => {
-    console.log("3");
-},2000);
+// Promise.resolve()
+// .then(() => {
+//     console.log("3");
+// },2000);
 
-console.log("4");
+// console.log("4");
+
+// Error Handling 
+// try {
+//     let result = 10 / 0;
+
+//     if (!Number.isFinite(result)) {
+//         throw new Error("Invalid calculation");
+//     }
+
+//     console.log(result);
+
+// } 
+// catch (error) {
+//     console.log(error.message);
+
+
+// } finally {
+//     console.log("Finished");
+// }
+
+async function grtUser(){
+    try{
+        const response = await fetch(".......");
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log(error.message);
+    }   
+}

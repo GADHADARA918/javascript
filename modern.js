@@ -28,7 +28,18 @@ console.log(increment()); // 2
 
 // hosting
 
-console.log(name); // undefined
-console.log(age); // ReferenceError: age is not defined
-var name = "tom";
-var age = 22;
+// console.log(name); // undefined
+// console.log(age); // ReferenceError: age is not defined
+// var name = "tom";
+// var age = 22;
+
+// this keyword
+const user = {
+    name: "tom",
+
+    showName() {
+        console.log(this.name);
+    }
+};
+
+user.showName(); // tom

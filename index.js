@@ -150,3 +150,21 @@ const user = {
 
 console.log(user.name);
 console.log(user.role);
+
+// destructuring object
+const user = {
+    name: "tom",
+    age: 22
+};
+
+const { name, age } = user;
+
+console.log(name, age);
+
+// destructuring array
+const colors = ["Red", "Blue"];
+
+const [first, second] = colors;
+
+console.log(first, second);
+

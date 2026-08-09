@@ -199,5 +199,17 @@
 // let result = username ?? "Guest";
 
 // console.log(result); // Guest
+// All basic js 
+const user = {
+    name: "tom",
+    age: 22,
+    skills: ["JavaScript", "Node.js", "MongoDB"]
+};
 
-cls
+const { name, skills } = user;
+
+const newSkills = [...skills, "Express.js"];
+
+const message = `${name} knows ${newSkills.length} technologies`;
+
+console.log(message);

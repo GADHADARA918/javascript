@@ -116,3 +116,14 @@ discountedItems.forEach((item, index) => {
   console.log(`${index + 1}. ${item.name} - ₹${item.finalPrice}`);
 });
 
+// function
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 20)); // 30
+
+//  arrow function
+const multiply = (a, b) => a * b;
+
+console.log(multiply(5, 2)); // 10

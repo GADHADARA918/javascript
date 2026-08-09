@@ -34,12 +34,21 @@ console.log(increment()); // 2
 // var age = 22;
 
 // this keyword
-const user = {
-    name: "tom",
+// const user = {
+//     name: "tom",
 
-    showName() {
-        console.log(this.name);
-    }
-};
+//     showName() {
+//         console.log(this.name);
+//     }
+// };
 
-user.showName(); // tom
+// user.showName(); // tom
+
+// callback function
+ const processUser = (name, callback) => {
+    console.log(`hello ${name}`);
+    callback();
+ }
+ processUser("tom", () => {
+    console.log("callback function executed");
+ });

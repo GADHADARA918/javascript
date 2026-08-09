@@ -45,10 +45,24 @@ console.log(increment()); // 2
 // user.showName(); // tom
 
 // callback function
- const processUser = (name, callback) => {
-    console.log(`hello ${name}`);
-    callback();
- }
- processUser("tom", () => {
-    console.log("callback function executed");
- });
+//  const processUser = (name, callback) => {
+//     console.log(`hello ${name}`);
+//     callback();
+//  }
+//  processUser("tom", () => {
+//     console.log("callback function executed");
+//  });
+
+// promise
+
+const promise = new Promise((resolve, reject) => {
+    let success = false; // Change this to true to resolve the promise
+    if (success) {
+        resolve("Promise resolved successfully!");
+    } else {
+        reject("Promise rejected!");
+    }
+});
+promise
+    .then(data => console.log(data))
+    .catch(error => console.log(error));

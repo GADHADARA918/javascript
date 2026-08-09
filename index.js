@@ -21,3 +21,12 @@ console.log(a + b); // 15
 console.log(a > b); // true
 console.log(a === b); // false
 console.log(a && b); // 5
+
+// condition
+let age = 20;
+
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}

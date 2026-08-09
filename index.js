@@ -169,15 +169,25 @@
 // console.log(first, second);
 
 // spread and rest operator
-const a = [1, 2];
-const b = [3, 4];
+// const a = [1, 2];
+// const b = [3, 4];
 
-const result = [...a, ...b];
+// const result = [...a, ...b];
 
-console.log(result);
-// rest operator
-function total(...numbers) {
-    return numbers.reduce((sum, n) => sum + n, 0);
-}
+// console.log(result);
+// // rest operator
+// function total(...numbers) {
+//     return numbers.reduce((sum, n) => sum + n, 0);
+// }
 
-console.log(total(10, 20, 30)); // 60
+// console.log(total(10, 20, 30)); // 60
+
+// optional changing  
+const user = {
+    profile: {
+        name: "tom"
+    }
+};
+
+console.log(user.profile?.name); // tom
+console.log(user.address?.city); // undefined

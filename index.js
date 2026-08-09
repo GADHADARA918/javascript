@@ -183,11 +183,21 @@
 // console.log(total(10, 20, 30)); // 60
 
 // optional changing  
-const user = {
-    profile: {
-        name: "tom"
-    }
-};
+// const user = {
+//     profile: {
+//         name: "tom"
+//     }
+// };
 
-console.log(user.profile?.name); // tom
-console.log(user.address?.city); // undefined
+// console.log(user.profile?.name); // tom
+// console.log(user.address?.city); // undefined
+// Nullish coalescing operator
+// let username = null;
+
+// Nullish Coalescing Operator (??)
+
+// let result = username ?? "Guest";
+
+// console.log(result); // Guest
+
+cls
